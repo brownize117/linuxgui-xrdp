@@ -1,7 +1,7 @@
 # LinuxGUI
 https://hub.docker.com/r/ductris/linuxgui
 ## Version
-1.0
+* 1.0
 ## Feature
 - XRDP ( Audio, h.264 Enc Support), port 3389
 - Xfce4 Desktop Env
