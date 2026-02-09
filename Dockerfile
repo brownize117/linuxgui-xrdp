@@ -26,10 +26,6 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
 RUN echo "google-chrome --disable-dev-shm-usage --no-sandbox" > /usr/bin/ggcr && chmod +x /usr/bin/ggcr
 # XRDP Build And Install
 RUN curl -fsSL https://tailscale.com/install.sh | sh
-RUN sudo systemctl start tailscaled
-RUN sudo tailscale up \
-  --login-server https://absen.senvas.my.id \
-  --authkey 98e92870e3e20c8ef9d7666eecc6fee1b480c53d7bad264b
 WORKDIR /app/xrdp
 RUN wget https://github.com/neutrinolabs/xrdp/releases/download/v0.10.5/xrdp-0.10.5.tar.gz \
  && tar xvzf xrdp-0.10.5.tar.gz && cd xrdp-0.10.5 && \
